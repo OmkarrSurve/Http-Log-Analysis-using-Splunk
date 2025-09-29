@@ -64,7 +64,7 @@ index=<your_http_index> sourcetype=<your_http_sourcetype>
 | stats count by src_ip, dst_ip | sort - count
 ```
 
--Determine the top or most frequent values using top limit
+- Determine the top or most frequent values using top limit
 ```
 index=<your_http_index> sourcetype=<your_http_sourcetype>
 | toplimit=10 src_ip, dst_ip | sort - count
@@ -98,7 +98,7 @@ index=<your_http_index> sourcetype=<your_http_sourcetype>
 - Investigate file transfers to or from suspicious IP addresses.
 ```
 index=<your_http_index> sourcetype=<your_http_sourcetype>
-| search src_ip="suspicious_ip"
+| search src_ip="suspicious_ip"    #Here you can write any suspicious ip that you think needs to be look after or searched
 ```
 
 
